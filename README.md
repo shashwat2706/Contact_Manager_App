@@ -25,85 +25,67 @@ This app showcases CRUD operations with local storage using Room, MVVM architect
 📜 RecyclerView – Efficiently displays the list of contacts.
 
 🏗 Project Structure
-app/src/main/java/com/example/contacts/
-│── MainActivity.kt               # Main UI controller
-│
-├── adapter/
-│   └── MyRecyclerViewAdapter.kt  # RecyclerView Adapter
-│
-├── database/
-│   ├── Contact.kt                # Data Entity
-│   ├── ContactDAO.kt             # DAO interface
-│   └── ContactDatabase.kt        # Room Database
-│
-├── repository/
-│   └── ContactRepository.kt      # Data abstraction layer
-│
-└── viewmodel/
-    └── ContactViewModel.kt       # Holds UI data & logic
+
+<img width="669" height="508" alt="image" src="https://github.com/user-attachments/assets/58114559-d9c9-41ec-bcc0-e0827001e0a2" />
 
 
 UI Layouts
 
-res/layout/activity_main.xml – Main screen (input fields, buttons, RecyclerView)
+- res/layout/activity_main.xml – Main screen (input fields, buttons, RecyclerView)
 
-res/layout/item_contact.xml – Layout for each contact row
+- res/layout/item_contact.xml – Layout for each contact row
 
 🏛 Architecture – MVVM
 
-Model → Room Database (Contact, ContactDAO, ContactDatabase, ContactRepository)
+**Model** → Room Database (Contact, ContactDAO, ContactDatabase, ContactRepository)
 
-View → UI Layer (MainActivity, XML layouts, RecyclerView)
+**View** → UI Layer (MainActivity, XML layouts, RecyclerView)
 
-ViewModel → ContactViewModel (exposes LiveData to UI, handles user actions)
+**ViewModel** → ContactViewModel (exposes LiveData to UI, handles user actions)
 
 ⚙️ Tech Stack
 
-Kotlin – Primary language
+**Kotlin** – Primary language
 
 Android Jetpack Components:
 
-Room (local persistence)
+**Room** (local persistence)
 
-ViewModel (UI-related data)
+**ViewModel** (UI-related data)
 
-LiveData (reactive data updates)
+**LiveData** (reactive data updates)
 
-Data Binding (connects UI ↔ ViewModel)
+**Data Binding** (connects UI ↔ ViewModel)
 
-Coroutines – Asynchronous DB operations
+**Coroutines** – Asynchronous DB operations
 
-RecyclerView – List rendering
+**RecyclerView** – List rendering
 
-Material Components – UI styling
+**Material Components** – UI styling
 
 🚀 How It Works
 
-Database Setup – ContactDatabase provides ContactDAO for CRUD operations.
+**Database Setup** – ContactDatabase provides ContactDAO for CRUD operations.
 
-User Actions – MainActivity calls ContactViewModel methods when buttons are clicked.
+**User Actions** – MainActivity calls ContactViewModel methods when buttons are clicked.
 
-Business Logic – ContactViewModel interacts with ContactRepository.
+**Business Logic** – ContactViewModel interacts with ContactRepository.
 
-Data Persistence – Repository updates Room DB.
+**Data Persistence** – Repository updates Room DB.
 
-Reactive Updates – LiveData notifies UI → RecyclerView updates instantly.
+**Reactive Updates** – LiveData notifies UI → RecyclerView updates instantly.
 
 ▶️ Getting Started
 
-Clone the repository:
+1. Clone the repository:
 
 git clone https://github.com/your-username/contacts-app.git
 cd contacts-app
 
 
-Open in Android Studio.
+2. Open in Android Studio.
 
-Build the project and run it on an emulator or device.
-
-📸 Screenshots (Optional)
-
-(Add screenshots of your app UI here for better presentation)
+3. Build the project and run it on an emulator or device.
 
 📜 License
 
